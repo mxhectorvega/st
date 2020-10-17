@@ -5,8 +5,8 @@
  *
  * font: see http://freedesktop.org/software/fontconfig/fontconfig-user.html
  */
-static char *font = "SF Mono:pixelsize=12:antialias=true:autohint=true";
-static char *font2[] = { "Font Awesome:pixelsize=10:antialias=true:autohint=true" };
+static char *font = "sf mono:pixelsize=12:antialias=true:autohint=true";
+static char *font2[] = { "Font Awesome:pixelsize=16:antialias=true:autohint=true" };
 static int borderpx = 2;
 
 /*
@@ -108,7 +108,7 @@ char *termname = "st-256color";
 unsigned int tabspaces = 8;
 
 /* bg opacity */
-float alpha = 0.85;
+float alpha = 0.86;
 
 /* Terminal colors (16 first used in escape sequence) */
 static const char *colorname[] = {
@@ -130,8 +130,8 @@ static const char *colorname[] = {
 	"#ebdbb2",
 	[255] = 0,
 	/* more colors can be added after 255 to use with DefaultXX */
-	"#FF0000", /* 256 -> cursor */
-	"#181818", /* 257 -> rev cursor*/
+	"#ff0000", /* 256 -> cursor */
+	"#dddddd", /* 257 -> rev cursor*/
 	"#181818", /* 258 -> bg */
 	"#dddddd", /* 259 -> fg */
 };
