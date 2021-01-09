@@ -43,6 +43,9 @@ dist: clean
 	rm -rf st-$(VERSION)
 
 install: st
+	mkdir -p $(DESTDIR)/usr/share/applications
+	cp -f st.desktop $(DESTDIR)/usr/share/applications
+	#chmod 755 $(DESTDIR)/usr/share/applications/st.desktop
 	mkdir -p $(DESTDIR)$(PREFIX)/bin
 	cp -f st $(DESTDIR)$(PREFIX)/bin
 	cp -f st-copyout $(DESTDIR)$(PREFIX)/bin
@@ -57,6 +60,7 @@ install: st
 	@echo Please see the README file regarding the terminfo entry of st.
 
 uninstall:
+	rm -f $(DESTDIR)/usr/share/applications/st.desktop
 	rm -f $(DESTDIR)$(PREFIX)/bin/st
 	rm -f $(DESTDIR)$(PREFIX)/bin/st-copyout
 	rm -f $(DESTDIR)$(PREFIX)/bin/st-urlhandler
